@@ -1,0 +1,10 @@
+<div ng-controller="dashboardController">
+  <p ng-bind="response"></p>
+  <h2>Put the question and options here: </h2>
+  Question: <input type="text" ng-model="newQuest.question">
+  Option 1: <input type="text" ng-model="newQuest.option1">
+  Option 2: <input type="text" ng-model="newQuest.option2">
+  Option 3: <input type="text" ng-model="newQuest.option3">
+  Option 4: <input type="text" ng-model="newQuest.option4">
+  <input type="submit" ng-click="newPoll()" value="Create Poll">
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>MEAN Belt Exam</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+    <script src="/js/factory/usersFactory.js"></script>
+    <script src="/js/factory/dashboardFactory.js"></script>
+    <script src="/js/controller/usersController.js"></script>
+    <script src="/js/controller/dashboardController.js"></script>
+    <script src="js/config/static.js">
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <a href="#/login">Login</a> | <a href="#/dashboard">Dashboard</a>
+    </div>
+    <div ng-view="">
+
+    </div>
+  </body>
+</html>

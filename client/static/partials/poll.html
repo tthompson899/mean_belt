@@ -1,0 +1,33 @@
+<div ng-controller="dashboardController">
+  <a href="#/dashboard">Go to Polls</a>
+
+  <div ng-repeat="question in questions">
+    <h2 ng-bind="question.question"></h2>
+    <p>Click the Vote button to choose one.</p>
+    <table border="1">
+        <tr>
+          <th>Options</th>
+          <th>Current Count of Votes</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <tr>
+            <td ng-bind="question.option1"></td>
+          </tr>
+          <tr>
+            <td ng-bind="question.option2"></td>
+          </tr>
+          <tr>
+            <td ng-bind="question.option3"></td>
+          </tr>
+          <tr>
+            <td ng-bind="question.option4"></td>
+          </tr>
+        </tr>
+
+        <tr>
+          <td><button>Vote</button></td>
+        </tr>
+    </table>
+  </div>
+</div>

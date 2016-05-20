@@ -1,0 +1,20 @@
+<div ng-controller="dashboardController">
+  <h1>Current Polls: </h1>
+  <a href="#/newPoll">Create a new Poll</a>
+
+  <input type="text" ng-model="filter_question" placeholder="Search">
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Survery Question</th>
+      <th>Date Posted</th>
+      <th>Action</th>
+    </tr>
+    <tr ng-repeat="question in questions | filter: filter_question">
+      <th></th>
+      <th><a  href="#/poll/{{question._id}}">{{ question.question }}</a></th>
+      <th ng-bind="question.date | date: 'MMM dd, yyyy'"></th>
+      <th><button ng-click="removepoll(question._id)">Delete</button></th>
+    </tr>
+  </table>
+</div>
